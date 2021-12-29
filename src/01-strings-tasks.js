@@ -7,7 +7,7 @@
 
 
 /**
- * Returns the result of concatenation of two strings.
+ * Returns the result of concatenation f two strings.
  *
  * @param {string} value1
  * @param {string} value2
