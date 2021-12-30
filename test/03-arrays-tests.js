@@ -286,10 +286,10 @@ describe('03-arrays-tasks', () => {
           [20, 21, 22, 23, 24],
           [30, 31, 32, 33, 34],
         ],
-        expected: '0,1,2,3,4\n'
-          + '10,11,12,13,14\n'
-          + '20,21,22,23,24\n'
-          + '30,31,32,33,34',
+        expected: '0, 1, 2, 3, 4\n'
+          + '10, 11, 12, 13, 14\n'
+          + '20, 21, 22, 23, 24\n'
+          + '30, 31, 32, 33, 34',
       }, {
         arr: [[]],
         expected: '',
@@ -539,13 +539,13 @@ describe('03-arrays-tasks', () => {
     [
       {
         arr: [0, false, 'cat', NaN, true, ''],
-        expected: '0,false,cat,NaN,true,',
+        expected: '0, false, cat, NaN, true, ',
       }, {
         arr: [1, 2, 3, 4, 5],
-        expected: '1,2,3,4,5',
+        expected: '1, 2, 3, 4, 5',
       }, {
         arr: ['rock', 'paper', 'scissors'],
-        expected: 'rock,paper,scissors',
+        expected: 'rock, paper, scissors',
       },
     ].forEach((data) => {
       const actual = tasks.toStringList(data.arr);

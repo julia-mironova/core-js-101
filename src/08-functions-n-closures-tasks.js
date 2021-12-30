@@ -13,7 +13,7 @@
  * Returns the functions composition of two specified functions f(x) and g(x).
  * The result of compose is to be a function of one argument, (lets call the argument x),
  * which works like applying function f to the result of applying function g to x, i.e.
- *  getComposition(f,g)(x) = f(g(x))
+ *  getComposition(f, g)(x) = f(g(x))
  *
  * @param {Function} f
  * @param {Function} g
@@ -57,8 +57,8 @@ function getPowerFunction(/* exponent */) {
  * @return {Function}
  *
  * @example
- *   getPolynom(2,3,5) => y = 2*x^2 + 3*x + 5
- *   getPolynom(1,-3)  => y = x - 3
+ *   getPolynom(2, 3, 5) => y = 2*x^2 + 3*x + 5
+ *   getPolynom(1, -3)  => y = x - 3
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
@@ -111,8 +111,8 @@ function retry(/* func, attempts */) {
  * Logger has to log the start and end of calling the specified function.
  * Logger has to log the arguments of invoked function.
  * The format of output log is:
- * <function name>(<arg1>, <arg2>,...,<argN>) starts
- * <function name>(<arg1>, <arg2>,...,<argN>) ends
+ * <function name>(<arg1>, <arg2>, ..., <argN>) starts
+ * <function name>(<arg1>, <arg2>, ..., <argN>) ends
  *
  *
  * @param {Function} func
@@ -141,11 +141,11 @@ function logger(/* func, logFunc */) {
  * @return {Function}
  *
  * @example
- *   const fn = function(x1,x2,x3,x4) { return  x1 + x2 + x3 + x4; };
- *   partialUsingArguments(fn, 'a')('b','c','d') => 'abcd'
- *   partialUsingArguments(fn, 'a','b')('c','d') => 'abcd'
- *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
- *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
+ *   const fn = function(x1, x2, x3, x4) { return  x1 + x2 + x3 + x4; };
+ *   partialUsingArguments(fn, 'a')('b', 'c', 'd') => 'abcd'
+ *   partialUsingArguments(fn, 'a', 'b')('c', 'd') => 'abcd'
+ *   partialUsingArguments(fn, 'a', 'b', 'c')('d') => 'abcd'
+ *   partialUsingArguments(fn, 'a', 'b', 'c', 'd')() => 'abcd'
  */
 function partialUsingArguments(/* fn, ...args1 */) {
   throw new Error('Not implemented');

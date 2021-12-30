@@ -211,7 +211,7 @@ describe('07-promises-tasks', () => {
     const defaultRejectionMessage = 'Incorrect data!';
 
     assert(
-      !/(Promise.all\s*\({0,})/.test(tasks.chainPromises.toString()),
+      !/(Promise.all\s*\({0, })/.test(tasks.chainPromises.toString()),
       'Function "chainPromises" should not use Promise.all method!',
     );
 

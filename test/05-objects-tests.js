@@ -19,16 +19,16 @@ describe('06-objects-tasks', () => {
     assert.equal(
       rect.width,
       10,
-      'Result of new Rectangle(10,20) should be an object with "width" property equals to 10',
+      'Result of new Rectangle(10, 20) should be an object with "width" property equals to 10',
     );
     assert(
       Object.prototype.hasOwnProperty.call(rect, 'height'),
-      'Result of new Rectangle(10,20) should be an object with "height" property',
+      'Result of new Rectangle(10, 20) should be an object with "height" property',
     );
     assert.equal(
       rect.width,
       10,
-      'Result of new Rectangle(10,20) should be an object with "height" property equals to 20',
+      'Result of new Rectangle(10, 20) should be an object with "height" property equals to 20',
     );
     assert.equal(
       typeof rect.getArea,
@@ -38,12 +38,12 @@ describe('06-objects-tasks', () => {
     assert.equal(
       rect.getArea(),
       200,
-      'Result of (new Rectangle(10,20)).getArea() should return the correct area of specified rectangle',
+      'Result of (new Rectangle(10, 20)).getArea() should return the correct area of specified rectangle',
     );
     assert.equal(
       (new tasks.Rectangle(3, 8)).getArea(),
       24,
-      'Result of (new Rectangle(3,8)).getArea() should return the correct area of specified rectangle',
+      'Result of (new Rectangle(3, 8)).getArea() should return the correct area of specified rectangle',
     );
   });
 
@@ -52,10 +52,10 @@ describe('06-objects-tasks', () => {
     [
       {
         obj: [1, 2, 3],
-        expected: '[1,2,3]',
+        expected: '[1, 2, 3]',
       }, {
         obj: { height: 10, width: 20 },
-        expected: '{"height":10,"width":20}',
+        expected: '{"height":10, "width":20}',
       },
     ].forEach((data) => {
       assert.equal(

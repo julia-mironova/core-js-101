@@ -81,7 +81,7 @@ describe('08-conditions-n-loops-tasks', () => {
       assert.equal(
         actual,
         data.expected,
-        `Sum of [${data.n1},${data.n2}] = ${data.expected}, but actual ${actual}`,
+        `Sum of [${data.n1}, ${data.n2}] = ${data.expected}, but actual ${actual}`,
       );
     });
   });
@@ -173,7 +173,7 @@ describe('08-conditions-n-loops-tasks', () => {
       assert.equal(
         tasks.doRectanglesOverlap(data.rect1, data.rect2),
         data.expected,
-        `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)},\n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`,
+        `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)}, \n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`,
       );
     });
   });
@@ -214,7 +214,7 @@ describe('08-conditions-n-loops-tasks', () => {
       assert.equal(
         tasks.isInsideCircle(data.circle, data.point),
         data.expected,
-        `isInsideCircle(\n   ${JSON.stringify(data.circle)},\n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`,
+        `isInsideCircle(\n   ${JSON.stringify(data.circle)}, \n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`,
       );
     });
   });

@@ -35,7 +35,7 @@ The task is to implement functions on different Core JS topics. There are eight 
       *
       * @example
       *   'aa', 'bb' => 'aabb'
-      *   'aa',''    => 'aa'
+      *   'aa', ''    => 'aa'
       *   '',  'bb'  => 'bb'
       */
       function concatenateStrings(value1, value2) {

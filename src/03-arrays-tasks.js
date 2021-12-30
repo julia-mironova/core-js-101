@@ -189,15 +189,15 @@ function getTail(/* arr, n */) {
  * @example
  *    [
  *       [  0, 1, 2, 3, 4 ],
- *       [ 10,11,12,13,14 ],
- *       [ 20,21,22,23,24 ],
- *       [ 30,31,32,33,34 ]
+ *       [ 10, 11, 12, 13, 14 ],
+ *       [ 20, 21, 22, 23, 24 ],
+ *       [ 30, 31, 32, 33, 34 ]
  *    ]
  *           =>
- *     '0,1,2,3,4\n'
- *    +'10,11,12,13,14\n'
- *    +'20,21,22,23,24\n'
- *    +'30,31,32,33,34'
+ *     '0, 1, 2, 3, 4\n'
+ *    +'10, 11, 12, 13, 14\n'
+ *    +'20, 21, 22, 23, 24\n'
+ *    +'30, 31, 32, 33, 34'
  */
 function toCsvText(/* arr */) {
   throw new Error('Not implemented');
@@ -263,9 +263,9 @@ function getSecondItems(/* arr */) {
  * @example :
  *  [] => []
  *  [ 1 ] => [ 1 ]
- *  [ 'a', 'b' ] => [ 'a', 'b','b' ]
- *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
- *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
+ *  [ 'a', 'b' ] => [ 'a', 'b', 'b' ]
+ *  [ 'a', 'b', 'c', null ] => [ 'a', 'b', 'b', 'c', 'c', 'c',  null, null, null, null ]
+ *  [ 1, 2, 3, 4, 5 ] => [ 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5 ]
  */
 function propagateItemsByPositionIndex(/* arr */) {
   throw new Error('Not implemented');
@@ -282,7 +282,7 @@ function propagateItemsByPositionIndex(/* arr */) {
  *   [] => []
  *   [ 1, 2 ] => [ 2, 1 ]
  *   [ 1, 2, 3 ] => [ 3, 2, 1 ]
- *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
+ *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(/* arr */) {
@@ -315,10 +315,10 @@ function getPositivesCount(/* arr */) {
  *
  * @example
  *   [] => []
- *   [ 'nine','one' ]                 => [ 'one', 'nine' ]
- *   [ 'one','two','three' ]          => [ 'one','two', 'three' ]
- *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
- *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
+ *   [ 'nine', 'one' ]                 => [ 'one', 'nine' ]
+ *   [ 'one', 'two', 'three' ]          => [ 'one', 'two', 'three' ]
+ *   [ 'nine', 'eight', 'nine', 'eight'] => [ 'eight', 'eight', 'nine', 'nine']
+ *   [ 'one', 'one', 'one', 'zero' ]     => [ 'zero', 'one', 'one', 'one' ]
  */
 function sortDigitNamesByNumericOrder(/* arr */) {
   throw new Error('Not implemented');
@@ -366,7 +366,7 @@ function getFalsyValuesCount(/* arr */) {
  * @example
  *    [ 0, 0, 1, 1, 1, 2 ], 1 => 3
  *    [ 1, 2, 3, 4, 5 ], 0 => 0
- *    [ 'a','b','c','c' ], 'c'=> 2
+ *    [ 'a', 'b', 'c', 'c' ], 'c'=> 2
  *    [ null, undefined, null ], null => 2
  *    [ true, 0, 1, 'true' ], true => 1
  */
@@ -375,15 +375,15 @@ function findAllOccurrences(/* arr, item */) {
 }
 
 /**
- * Concatenates all elements from specified array into single string with ',' delimiter
+ * Concatenates all elements from specified array into single string with ', ' delimiter
  *
  * @param {array} arr
  * @return {string}
  *
  * @example
- *    [0, false, 'cat', NaN, true, '']  => '0,false,cat,NaN,true,'
- *    [1, 2, 3, 4, 5]                   => '1,2,3,4,5'
- *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
+ *    [0, false, 'cat', NaN, true, '']  => '0, false, cat, NaN, true, '
+ *    [1, 2, 3, 4, 5]                   => '1, 2, 3, 4, 5'
+ *    ['rock', 'paper', 'scissors']     => 'rock, paper, scissors'
  */
 function toStringList(/* arr */) {
   throw new Error('Not implemented');
@@ -429,14 +429,14 @@ function sortCitiesArray(/* arr */) {
  * @example
  *     1  => [[1]]
  *
- *     2 => [[1,0],
- *           [0,1]]
+ *     2 => [[1, 0],
+ *           [0, 1]]
  *
- *          [[1,0,0,0,0],
- *           [0,1,0,0,0],
- *     5 =>  [0,0,1,0,0],
- *           [0,0,0,1,0],
- *           [0,0,0,0,1]]
+ *          [[1, 0, 0, 0, 0],
+ *           [0, 1, 0, 0, 0],
+ *     5 =>  [0, 0, 1, 0, 0],
+ *           [0, 0, 0, 1, 0],
+ *           [0, 0, 0, 0, 1]]
  */
 function getIdentityMatrix(/* n */) {
   throw new Error('Not implemented');
@@ -520,7 +520,8 @@ function group(/* array, keySelector, valueSelector */) {
  *
  * @example
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
- *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
+ *   ['one', 'two', 'three'], x=>x.split('')  =>
+ * ['o', 'n', 'e', 't', 'w', 'o', 't', 'h', 'r', 'e', 'e']
  */
 function selectMany(/* arr, childrenSelector */) {
   throw new Error('Not implemented');
@@ -535,8 +536,8 @@ function selectMany(/* arr, childrenSelector */) {
  * @return {any} element from array
  *
  * @example
- *   [[1, 2], [3, 4], [5, 6]], [0,0]  => 1        (arr[0][0])
- *   ['one','two','three'], [2]       => 'three'  (arr[2])
+ *   [[1, 2], [3, 4], [5, 6]], [0, 0]  => 1        (arr[0][0])
+ *   ['one', 'two', 'three'], [2]       => 'three'  (arr[2])
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(/* arr, indexes */) {

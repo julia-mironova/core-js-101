@@ -8,7 +8,7 @@
 
 
 /**
- * Returns the 'Fizz','Buzz' or an original number using the following rules:
+ * Returns the 'Fizz', 'Buzz' or an original number using the following rules:
  * 1) return original number
  * 2) but if number multiples of three return 'Fizz'
  * 3) for the multiples of five return 'Buzz'
@@ -56,9 +56,9 @@ function getFactorial(/* n */) {
  * @return {number}
  *
  * @example:
- *   1,2   =>  3  ( = 1+2 )
- *   5,10  =>  45 ( = 5+6+7+8+9+10 )
- *   -1,1  =>  0  ( = -1 + 0 + 1 )
+ *   1, 2   =>  3  ( = 1+2 )
+ *   5, 10  =>  45 ( = 5+6+7+8+9+10 )
+ *   -1, 1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(/* n1, n2 */) {
   throw new Error('Not implemented');
@@ -75,10 +75,10 @@ function getSumBetweenNumbers(/* n1, n2 */) {
  * @return {bool}
  *
  * @example:
- *   1,2,3    =>  false
- *   3,4,5    =>  true
- *   10,1,1   =>  false
- *   10,10,10 =>  true
+ *   1, 2, 3    =>  false
+ *   3, 4, 5    =>  true
+ *   10, 1, 1   =>  false
+ *   10, 10, 10 =>  true
  */
 function isTriangle(/* a, b, c */) {
   throw new Error('Not implemented');
@@ -277,7 +277,7 @@ function getDigitalRoot(/* num */) {
  * Returns true if the specified string has the balanced brackets and false otherwise.
  * Balanced means that is, whether it consists entirely of pairs of opening/closing brackets
  * (in that order), none of which mis-nest.
- * Brackets include [],(),{},<>
+ * Brackets include [], (), {}, <>
  *
  * @param {string} str
  * @return {boolean}
@@ -368,26 +368,26 @@ function getMatrixProduct(/* m1, m2 */) {
  * Returns the evaluation of the specified tic-tac-toe position.
  * See the details: https://en.wikipedia.org/wiki/Tic-tac-toe
  *
- * Position is provides as 3x3 array with the following values: 'X','0', undefined
+ * Position is provides as 3x3 array with the following values: 'X', '0', undefined
  * Function should return who is winner in the current position according to the game rules.
- * The result can be: 'X','0',undefined
+ * The result can be: 'X', '0', undefined
  *
  * @param {array} position
  * @return {string}
  *
  * @example
  *
- *   [[ 'X',   ,'0' ],
- *    [    ,'X','0' ],       =>  'X'
- *    [    ,   ,'X' ]]
+ *   [[ 'X',   , '0' ],
+ *    [    , 'X', '0' ],       =>  'X'
+ *    [    ,   , 'X' ]]
  *
- *   [[ '0','0','0' ],
- *    [    ,'X',    ],       =>  '0'
- *    [ 'X',   ,'X' ]]
+ *   [[ '0', '0', '0' ],
+ *    [    , 'X',    ],       =>  '0'
+ *    [ 'X',   , 'X' ]]
  *
- *   [[ '0','X','0' ],
- *    [    ,'X',    ],       =>  undefined
- *    [ 'X','0','X' ]]
+ *   [[ '0', 'X', '0' ],
+ *    [    , 'X',    ],       =>  undefined
+ *    [ 'X', '0', 'X' ]]
  *
  *   [[    ,   ,    ],
  *    [    ,   ,    ],       =>  undefined

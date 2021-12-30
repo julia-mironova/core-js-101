@@ -66,9 +66,9 @@ function getAverage(/* value1, value2 */) {
  * @return {number}
  *
  * @example:
- *   (0,0) (0,1)    => 1
- *   (0,0) (1,0)    => 1
- *   (-5,0) (10,-10) => 18.027756377319946
+ *   (0, 0) (0, 1)    => 1
+ *   (0, 0) (1, 0)    => 1
+ *   (-5, 0) (10, -10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
   throw new Error('Not implemented');
@@ -103,11 +103,11 @@ function getLinearEquationRoot(/* a, b */) {
  * @return {number}
  *
  * @example:
- *   (1,0) (0,1)     => π/2
- *   (0,1) (0,-1)    => π
- *   (0,-1) (1,0)    => π/2
- *   (0,1) (0,1)     => 0
- *   (0,1) (1,2)     => 0
+ *   (1, 0) (0, 1)     => π/2
+ *   (0, 1) (0, -1)    => π
+ *   (0, -1) (1, 0)    => π/2
+ *   (0, 1) (0, 1)     => 0
+ *   (0, 1) (1, 2)     => 0
  */
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
   throw new Error('Not implemented');
@@ -146,7 +146,7 @@ function parseNumberFromString(/* value */) {
 }
 
 /**
- * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
+ * Returns a diagonal length of the rectangular parallelepiped given by its sides a, b, c.
  *
  * @param {number} a
  * @param {number} b
@@ -154,9 +154,9 @@ function parseNumberFromString(/* value */) {
  * @return {number}
  *
  * @example:
- *   1,1,1   => 1.7320508075688772
- *   3,3,3   => 5.196152422706632
- *   1,2,3   => 3.741657386773941
+ *   1, 1, 1   => 1.7320508075688772
+ *   3, 3, 3   => 5.196152422706632
+ *   1, 2, 3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(/* a, b, c */) {
   throw new Error('Not implemented');

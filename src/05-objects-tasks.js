@@ -15,7 +15,7 @@
  * @return {Object}
  *
  * @example
- *    const r = new Rectangle(10,20);
+ *    const r = new Rectangle(10, 20);
  *    console.log(r.width);       // => 10
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
@@ -32,8 +32,8 @@ function Rectangle(/* width, height */) {
  * @return {string}
  *
  * @example
- *    [1,2,3]   =>  '[1,2,3]'
- *    { width: 10, height : 20 } => '{"height":10,"width":20}'
+ *    [1, 2, 3]   =>  '[1, 2, 3]'
+ *    { width: 10, height : 20 } => '{"height":10, "width":20}'
  */
 function getJSON(/* obj */) {
   throw new Error('Not implemented');
@@ -66,7 +66,7 @@ function fromJSON(/* proto, json */) {
  *              \----/\----/\----------/
  *              Can be several occurrences
  *
- * All types of selectors can be combined using the combination ' ','+','~','>' .
+ * All types of selectors can be combined using the combination ' ', '+', '~', '>' .
  *
  * The task is to design a single class, independent classes or classes hierarchy
  * and implement the functionality to build the css selectors using the provided cssSelectorBuilder.
