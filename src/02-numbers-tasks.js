@@ -212,21 +212,14 @@ function roundToPowerOfTen(/* num, pow */) {
  *   17 => true
  */
 function isPrime(n) {
-  let unswer = false;
-  if (n === 2) {
-    unswer = true;
-  } else if (n > 1) {
-    for (let i = 2; i < n; i + 1) {
-      if (n % i !== 0) {
-        unswer = true;
-      } else if (n === i * i) {
-        unswer = false;
-      } else {
-        unswer = false;
-      }
+  let flag = true;
+  for (let i = 2; i < n; i += 1) {
+    if (n % i === 0) {
+      flag = false;
+      break; // выйдем из цикла
     }
   }
-  return unswer;
+  return flag;
 }
 
 /**
@@ -245,7 +238,14 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  return Math.max(value, def);
+  let unswer = 0;
+  const convertedValue = +value;
+  if (!Number.isNaN(convertedValue) || value instanceof Number) {
+    unswer = +value;
+  } else {
+    unswer = def;
+  }
+  return unswer;
 }
 
 module.exports = {
