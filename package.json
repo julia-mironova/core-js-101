@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Core JS 101",
   "scripts": {
-    "test": "npm run lint && mocha -g 04-date-tasks",
+    "test": "npm run lint && mocha -g 06-promises-tasks",
     "lint": "node node_modules/eslint/bin/eslint.js ./src"
   },
   "author": "aorgish, mikhama",
