@@ -300,8 +300,20 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  let unsw = 0;
+  function doIt() {
+    const unswArr = num.toString().split('');
+    unsw = unswArr.reduce((acc, n) => acc + +n, 0);
+    if (unsw > 10) {
+      // eslint-disable-next-line no-param-reassign
+      num = unsw;
+      doIt();
+    }
+    return unsw;
+  }
+  doIt();
+  return unsw;
 }
 
 
@@ -351,8 +363,8 @@ function isBracketsBalanced(/* str */) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(/* num, n */) {
-  throw new Error('Not implemented');
+function toNaryString(num, n) {
+  return parseInt(num.toString(), 10).toString(n);
 }
 
 
@@ -368,8 +380,28 @@ function toNaryString(/* num, n */) {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/verbalizer/logs'] => '/'
  */
-function getCommonDirectoryPath(/* pathes */) {
-  throw new Error('Not implemented');
+function getCommonDirectoryPath(pathes) {
+  let arr = pathes.map((e) => e.split('/'));
+  let unsw = [];
+  while (arr[0].length > 0) {
+    const elem = arr[0][0];
+    const res = arr.every((array) => array[0] === elem);
+    if (res) {
+      arr = arr.map((array) => array.slice(1, array.length));
+      unsw.push(elem);
+    } else {
+      break;
+    }
+  }
+  // .map((e) => (e === '' ? '/' : e))
+  unsw = unsw.map((e) => (e === '' ? '/' : e)).reduce((acc, curr) => {
+    let res = acc + curr;
+    if (curr !== '/') {
+      res += '/';
+    }
+    return res;
+  }, '');
+  return unsw;
 }
 
 

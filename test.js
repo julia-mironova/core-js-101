@@ -36,12 +36,33 @@ console.log(9);
 */
 
 
-function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  const c = (isStartIncluded === true) ? '[' : '(';
-  const d = (isEndIncluded === true) ? ']' : ')';
-  const e = (a > b) ? `${b}, ${a}` : `${a}, ${b}`;
-  return `${c}${e}${d}`;
+function getCommonDirectoryPath(pathes) {
+  let arr = pathes.map((e) => e.split('/'));
+  let unsw = [];
+  while (arr[0].length > 0) {
+    const elem = arr[0][0];
+    const res = arr.every((array) => array[0] === elem);
+    if (res) {
+      arr = arr.map((array) => array.slice(1, array.length));
+      unsw.push(elem);
+    } else {
+      break;
+    }
+  }
+  // .map((e) => (e === '' ? '/' : e))
+  unsw = unsw.map((e) => (e === '' ? '/' : e)).reduce((acc, curr) => {
+    let res = acc + curr;
+    if (curr !== '/') {
+      res += '/';
+    }
+    return res;
+  }, '');
+
+  return unsw;
 }
 
 
-console.log(getIntervalString(0, 1, false, true));
+console.log(getCommonDirectoryPath(['/web/assets/style.css', '/.bin/mocha', '/read.me']));
+console.log(getCommonDirectoryPath(['/web/images/image1.png', '/web/images/image2.png']));
+
+
