@@ -36,9 +36,12 @@ console.log(9);
 */
 
 
-function isInsideCircle(circle, point) {
-  console.log(circle.center.x);
-
+function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
+  const c = (isStartIncluded === true) ? '[' : '(';
+  const d = (isEndIncluded === true) ? ']' : ')';
+  const e = (a > b) ? `${b}, ${a}` : `${a}, ${b}`;
+  return `${c}${e}${d}`;
 }
 
-console.log(isInsideCircle({ center: { x: 2, y: 0 }, radius: 10 }, { x: 0, y: 1 }));
+
+console.log(getIntervalString(0, 1, false, true));
