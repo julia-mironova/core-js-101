@@ -33,36 +33,78 @@ uns.then(a);
 console.log(8);
 console.log(`uns=${uns}`);
 console.log(9);
-*/
 
-
-function getCommonDirectoryPath(pathes) {
-  let arr = pathes.map((e) => e.split('/'));
-  let unsw = [];
-  while (arr[0].length > 0) {
-    const elem = arr[0][0];
-    const res = arr.every((array) => array[0] === elem);
-    if (res) {
-      arr = arr.map((array) => array.slice(1, array.length));
-      unsw.push(elem);
-    } else {
-      break;
-    }
+/// codewars!!
+function multiplyAll(arr) {
+  function numMul(n) {
+    return arr.map((e) => e * n);
   }
-  // .map((e) => (e === '' ? '/' : e))
-  unsw = unsw.map((e) => (e === '' ? '/' : e)).reduce((acc, curr) => {
-    let res = acc + curr;
-    if (curr !== '/') {
-      res += '/';
-    }
-    return res;
-  }, '');
+  return numMul;
+}
+console.log(multiplyAll([1, 2, 3])(2)); */
 
-  return unsw;
+// - ho -ho..
+
+/* function ho(arg) {
+  console.log(arg);
+  if (!arg) {
+    return 'Ho!';
+  } else {
+    return `Ho ${arg}`
+  }
 }
 
 
-console.log(getCommonDirectoryPath(['/web/assets/style.css', '/.bin/mocha', '/read.me']));
-console.log(getCommonDirectoryPath(['/web/images/image1.png', '/web/images/image2.png']));
+console.log(ho(ho())); */
 
+// once
+/* function once(fn) {
+  let isExecuted = false;
+  function a(...arg) {
+    if (!isExecuted) {
+      isExecuted = true;
+      return fn(...arg);
+    }
+  }
+  return a;
+}
+const xz1 = once(console.log);
+console.log(xz1(5));
+console.log(xz1(6)); */
 
+// mulitifilter
+
+/*
+function isEven(el) {
+  return el % 2 === 0;
+}
+
+function isGTten(el) {
+  return el > 10;
+}
+
+console.log([1, 2, 3, 4, 10, 11, 12, 20, 21, 22].filter(multiFilter(isEven, isGTten)));
+// should return [12,20,22] */
+
+function getPolynom() {
+  // eslint-disable-next-line prefer-rest-params
+  const args = arguments;
+  const n = args.length;
+  // eslint-disable-next-line no-undef
+  // eslint-disable-next-line no-unused-vars
+  function polinom(x) {
+    let exp = 0;
+    let k = n - 1;
+    for (let i = 0; i < n; i += 1) {
+      exp += args[i] * (x ** k);
+      k -= 1;
+    }
+    return exp;
+  }
+  return polinom;
+}
+
+const f = getPolynom(2, 3, 5);
+console.log(f(0));
+console.log(f(2));
+console.log(f(3));

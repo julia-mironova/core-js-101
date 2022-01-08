@@ -44,8 +44,12 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  // eslint-disable-next-line no-bitwise
+  function a(x) {
+    return x ** exponent;
+  }
+  return a;
 }
 
 
@@ -63,7 +67,21 @@ function getPowerFunction(/* exponent */) {
  *   getPolynom()      => null
  */
 function getPolynom() {
-  throw new Error('Not implemented');
+  // eslint-disable-next-line prefer-rest-params
+  const args = arguments;
+  const n = args.length;
+  // eslint-disable-next-line no-undef
+  // eslint-disable-next-line no-unused-vars
+  function polinom(x) {
+    let exp = 0;
+    let k = n - 1;
+    for (let i = 0; i < n; i += 1) {
+      exp += args[i] * (x ** k);
+      k -= 1;
+    }
+    return exp;
+  }
+  return polinom;
 }
 
 
