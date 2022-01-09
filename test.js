@@ -86,7 +86,7 @@ function isGTten(el) {
 console.log([1, 2, 3, 4, 10, 11, 12, 20, 21, 22].filter(multiFilter(isEven, isGTten)));
 // should return [12,20,22] */
 
-function getPolynom() {
+/* function getPolynom() {
   // eslint-disable-next-line prefer-rest-params
   const args = arguments;
   const n = args.length;
@@ -102,9 +102,21 @@ function getPolynom() {
     return exp;
   }
   return polinom;
-}
+} */
 
-const f = getPolynom(2, 3, 5);
-console.log(f(0));
-console.log(f(2));
-console.log(f(3));
+function memoize(func) {
+  let isExecuted = false;
+  // eslint-disable-next-line consistent-return
+  let unsw;
+  function a() {
+    if (!isExecuted) {
+      isExecuted = true;
+      unsw = func();
+    }
+    return unsw;
+  }
+  return a;
+}
+const f = memoize(Math.random);
+console.log(f());
+console.log(f());
