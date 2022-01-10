@@ -140,7 +140,6 @@ function retry(func, attempts) {
         break;
       } catch (e) {
         i += 1;
-        console.log('test');
       }
     }
     return result;

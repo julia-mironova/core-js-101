@@ -1,3 +1,6 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable no-multi-spaces */
+/* eslint-disable indent */
 /* eslint-disable no-bitwise */
 
 /* function caty(isPositiveAnswer) {
@@ -104,19 +107,126 @@ console.log([1, 2, 3, 4, 10, 11, 12, 20, 21, 22].filter(multiFilter(isEven, isGT
   return polinom;
 } */
 
-function memoize(func) {
-  let isExecuted = false;
-  // eslint-disable-next-line consistent-return
-  let unsw;
-  function a() {
-    if (!isExecuted) {
-      isExecuted = true;
-      unsw = func();
+/* function add(n) {
+  function a(x) {
+    if (x) {
+      return x + n;
     }
-    return unsw;
   }
   return a;
 }
-const f = memoize(Math.random);
-console.log(f());
-console.log(f());
+
+console.log(add(1)(2)(3)); */
+
+/* function add(n) {
+  function a(x) {
+    if (x) {
+      return x + n;
+    }
+  }
+  return a;
+} */
+
+
+/* function add(a) {
+  return function (b) {
+    if (b) {
+      return add(a + b); // which again can take an argument.
+    }
+    a();
+    return a; // it will keep on adding 1+2+3+4..
+  };
+}
+console.log(add(1)(2)(3)); */
+
+// create continue count
+/* function makeLooper(str) {
+  let cz = 0;
+  return function () {
+    if (cz === str.length) {
+      cz = 0;
+    }
+    const uns = str[cz];
+    cz += 1;
+    return uns;
+  };
+}
+
+const dog = makeLooper('cat'); */
+
+/* function add(n) {
+  const fn = function (x) {
+    return add(n + x);
+  };
+
+  fn.valueOf = function () {
+    return n;
+  };
+
+  return fn;
+} */
+
+/* function uncurry(fn) {
+  // eslint-disable-next-line func-names
+  return function (...args) {
+    while (typeof fn === 'function') {
+      if (fn.length !== 0 && args.length === 0) {
+        return fn;
+      }
+      // eslint-disable-next-line no-param-reassign
+      fn = fn(...args.splice(0, fn.length));
+    }
+    return fn;
+  };
+}
+console.log(uncurry(console.log((1)(5)(2)))); */
+
+/* group([
+  *      { country: 'Belarus', city: 'Brest' },
+  *      { country: 'Russia', city: 'Omsk' },
+  *      { country: 'Russia', city: 'Samara' },
+  *      { country: 'Belarus', city: 'Grodno' },
+  *      { country: 'Belarus', city: 'Minsk' },
+  *      { country: 'Poland', city: 'Lodz' }
+  *     ],
+  *     item => item.country,
+  *     item => item.city
+  *   )
+  *            =>
+  *   Map {
+  *    "Belarus" => ["Brest", "Grodno", "Minsk"],
+  *    "Russia" => ["Omsk", "Samara"],
+  *    "Poland" => ["Lodz"]
+  *   }
+  */
+  function sortCitiesArray(arr) {
+    return arr.sort((a, b) => {
+      if (a.country > b.country) {
+        return 1;
+      }
+      if (b.country > a.country) {
+          return -1;
+      }
+      return 0;
+    }).sort((a, b) => {
+      if (a.country !== b.country) {
+        return 0;
+      }
+      if (a.city > b.city) {
+        return 1;
+      }
+      if (b.city > a.city) {
+          return -1;
+      }
+      return 0;
+    });
+  }
+
+console.log(sortCitiesArray([
+        { country: 'Russia',  city: 'Moscow' },
+        { country: 'Belarus', city: 'Minsk' },
+        { country: 'Poland',  city: 'Warsaw' },
+        { country: 'Russia',  city: 'Saint Petersburg' },
+        { country: 'Poland',  city: 'Krakow' },
+        { country: 'Belarus', city: 'Brest' }
+      ]));
