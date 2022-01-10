@@ -129,8 +129,23 @@ function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
-function retry(/* func, attempts */) {
-  throw new Error('Not implemented');
+function retry(func, attempts) {
+  let i = 0;
+  // eslint-disable-next-line func-names
+  function a() {
+    let result;
+    while (i <= attempts) {
+      try {
+        result = func();
+        break;
+      } catch (e) {
+        i += 1;
+        console.log('test');
+      }
+    }
+    return result;
+  }
+  return a;
 }
 
 
@@ -197,8 +212,13 @@ function partialUsingArguments(/* fn, ...args1 */) {
  *   getId4() => 7
  *   getId10() => 11
  */
-function getIdGeneratorFunction(/* startFrom */) {
-  throw new Error('Not implemented');
+function getIdGeneratorFunction(startFrom) {
+  let unsw = startFrom - 1;
+  function getID() {
+    unsw += 1;
+    return unsw;
+  }
+  return getID;
 }
 
 

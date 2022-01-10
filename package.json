@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Core JS 101",
   "scripts": {
-    "test": "npm run lint && mocha -g 08-functions-n-closures-tasks",
+    "test": "npm run lint && mocha -g 03-arrays-tasks",
     "test-jul":"node test.js",
     "lint": "node node_modules/eslint/bin/eslint.js ./src"
   },
